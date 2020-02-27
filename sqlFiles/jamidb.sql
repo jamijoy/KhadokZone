@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2020 at 08:17 AM
+-- Generation Time: Feb 27, 2020 at 10:46 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -53,7 +53,7 @@ CREATE TABLE `khadokfoods` (
   `Fid` int(10) NOT NULL,
   `Rid` int(10) NOT NULL,
   `Fname` varchar(30) NOT NULL,
-  `Fdes` varchar(30) NOT NULL,
+  `Fdes` varchar(150) NOT NULL,
   `Fprice` double(10,2) NOT NULL,
   `Ftype` varchar(10) NOT NULL,
   `Fstar` int(5) NOT NULL
@@ -67,7 +67,8 @@ INSERT INTO `khadokfoods` (`Fid`, `Rid`, `Fname`, `Fdes`, `Fprice`, `Ftype`, `Fs
 (11111, 1111, 'Basmati Kacchi', 'Platter for 1', 230.00, 'launch', 5),
 (11112, 1111, 'Khasir Polao', 'Platter for 3 and compact pr', 550.00, 'launch', 3),
 (11113, 1112, 'Awesome Khadok', 'Platter for 3', 890.00, 'launch', 5),
-(11114, 1113, 'Lime Juice', 'Lemoned Greened', 80.00, 'drink', 4);
+(11114, 1113, 'Lime Juice', 'Lemoned Greened', 80.00, 'drink', 4),
+(11115, 1113, 'Pizza Large Pack', '20'''' inch Family Size', 1399.00, 'FastFood', 4);
 
 -- --------------------------------------------------------
 
@@ -89,7 +90,8 @@ CREATE TABLE `khadokrestaurants` (
 INSERT INTO `khadokrestaurants` (`Rid`, `Rname`, `Rloc`, `Rstar`) VALUES
 (1111, 'Kacchi Vai', 'Bashundhara Gate R/A', 4),
 (1112, 'Mughal Empire', 'Dhanmondi', 5),
-(1113, 'Chilox', 'Mohakhali', 3);
+(1113, 'Chilox', 'Mohakhali', 3),
+(1114, 'AllarDan Briyani House', 'Kuratoli', 3);
 
 -- --------------------------------------------------------
 
@@ -98,6 +100,7 @@ INSERT INTO `khadokrestaurants` (`Rid`, `Rname`, `Rloc`, `Rstar`) VALUES
 --
 
 CREATE TABLE `khadokreviews` (
+  `no` int(10) NOT NULL,
   `Uid` int(10) NOT NULL,
   `Fid` int(10) NOT NULL,
   `Uname` varchar(30) NOT NULL,
@@ -108,9 +111,9 @@ CREATE TABLE `khadokreviews` (
 -- Dumping data for table `khadokreviews`
 --
 
-INSERT INTO `khadokreviews` (`Uid`, `Fid`, `Uname`, `review`) VALUES
-(112, 1112, 'estiak', 'Awesome lagse khabar ta, joss'),
-(113, 1113, 'jami', 'onkkk thanda silo');
+INSERT INTO `khadokreviews` (`no`, `Uid`, `Fid`, `Uname`, `review`) VALUES
+(1, 112, 11112, 'estiak', 'Awesome lagse khabar ta, joss'),
+(2, 113, 11113, 'jami', 'onkkk thanda silo');
 
 -- --------------------------------------------------------
 
@@ -183,6 +186,12 @@ ALTER TABLE `khadokrestaurants`
   ADD PRIMARY KEY (`Rid`);
 
 --
+-- Indexes for table `khadokreviews`
+--
+ALTER TABLE `khadokreviews`
+  ADD PRIMARY KEY (`no`);
+
+--
 -- Indexes for table `khadokusers`
 --
 ALTER TABLE `khadokusers`
@@ -202,12 +211,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `khadokfoods`
 --
 ALTER TABLE `khadokfoods`
-  MODIFY `Fid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11115;
+  MODIFY `Fid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11116;
 --
 -- AUTO_INCREMENT for table `khadokrestaurants`
 --
 ALTER TABLE `khadokrestaurants`
-  MODIFY `Rid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1114;
+  MODIFY `Rid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1115;
+--
+-- AUTO_INCREMENT for table `khadokreviews`
+--
+ALTER TABLE `khadokreviews`
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `khadokusers`
 --

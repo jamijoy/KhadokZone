@@ -11,11 +11,11 @@ module.exports ={
 			}
 		});
 	},
-	getByFoodId: function(id, callback){
+	getByFoodId: function(fid, callback){
 		var sql = "select * from khadokreviews where Fid=?";
-		db.getResult(sql, [id], function(result){
-			if(result.length > 0){
-				callback(result);
+		db.getResult(sql, [fid], function(results){
+			if(results.length > 0){
+				callback(results);
 			}else{
 				callback(null);
 			}

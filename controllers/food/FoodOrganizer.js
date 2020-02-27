@@ -19,7 +19,7 @@ router.get('/:Fid', function(req, res){
 
 router.get('/Review/:Fid', function(req, res){	
 	revModel.getByFoodId(req.params.Fid, function(result){
-		res.render('food/ReviewIndex', {review: result});
+		res.render('food/ReviewIndex', {rev: result,fid:req.params.Fid});
 	});
 });
 
