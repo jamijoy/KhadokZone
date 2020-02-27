@@ -51,9 +51,9 @@ module.exports ={
 			}
 		});
 	},
-	insert: function(user, callback){
-		var sql = "insert into user values(?,?,?,?,?,?,?)";
-		db.execute(sql, [null, user.name, user.mail, user.cname, user.contact, user.uname, user.pass], function(status){
+	insert: function(food, callback){
+		var sql = "insert into khadokfoods values(?,?,?,?,?,?,?)";
+		db.execute(sql, [null, food.rid, food.name, food.des, food.price, food.type, food.star], function(status){
 			if(status){
 				callback(true);
 			}else{

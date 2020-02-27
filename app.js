@@ -11,6 +11,7 @@ var home 			= require('./controllers/home');
 var land 			= require('./controllers/land');
 var register		= require('./controllers/register');
 var registerRest	= require('./controllers/AddRestaurants');
+var AddFoodItem  	= require('./controllers/AddFoodItem');
 var empHome		= require('./controllers/member/home');
 
 var app = express();
@@ -35,6 +36,7 @@ app.use('/register', register);
 app.use('/home', home);
 app.use('/', land);
 app.use('/AddRestaurants', registerRest);
+app.use('/AddFoodItem', AddFoodItem);
 app.use('/member/home', empHome);
 
 

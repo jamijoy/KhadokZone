@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Food Page - KhadokZone</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div class="headDiv">
+		<h1 style="margin-left:50px;">
+			
+			<br/>Add Food Page - khadokZone
+		</h1>
+		<a href="/home" style="margin-left:900px;">Back to Home </a>
+		<a href="#" style="margin-left:10px;">| &nbsp About</a>
+	</div>
+	
+	<center>
+		<div class="divBorder">
+			<form method="post"> 
+				Food Name: <input type="text" name="name" > <br><br>
+				Food Description: <input type="text" name="des" ><br><br>
+				Food price: <input type="text" name="price" ><br><br>
+				<label for="type">Type of Food:</label>
+
+				<select id="type" name="type">
+				  <option value="Launch">Launch</option>
+				  <option value="Dinner">Dinner</option>
+				  <option value="Breakfast">Breakfast</option>
+				  <option value="Snacks">Snacks</option>
+				  <option value="Drink">Drink</option>
+				  <option value="FastFood">FastFood</option>
+				</select><br><br>
+				<label for="star">Rate this Food:</label>
+
+				<select id="star" name="star">
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				  <option value="4">4</option>
+				  <option value="5">5</option>
+				</select><br><br>
+				
+				Restaurant ID: <input type="text" name="rid" ><br><br>
+				<input type="submit" name="regiBtn" value="Add this Food Item!" >
+			</form>
+		</div>
+	</center>
+</body>
+</html>
