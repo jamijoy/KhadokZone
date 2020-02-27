@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title>Food Review Information</title>
-	<link rel="stylesheet" type="text/css" href="../../style/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../style/style.css">
 </head>
 <body>
 	<div class="headDiv">
 		<h1 style="margin-left:50px;">
 			
-			<br/>KhadokZone - Food Review Information ! Food ID : <%= fid%>
+			<br/>KhadokZone - Food Review Information ! Food ID : <%= fid%> ! User ID : <%= uid%> ! User Name : <%= uname%>
 		</h1>
 		<a href="/logout" style="margin-left:900px;">Logout</a>
 		<a href="/home" style="margin-left:10px;">| Home |</a>
@@ -22,12 +22,12 @@
 		</h1>
 			<form method="post"> 
 				Write Review : <br/ >
-				<input type="text" style="height:200px;" name="rev" > <br><br>
+				<input type="text" style="width:150px; height:150px;" name="rev" > <br><br>
 				<input type="submit" name="regiBtn" value="Save" >
 			</form>
 	</div>
-	
-	<div class="divBorder">
+</center>
+	<div class="divBorder" style="width:60%;">
 		<h1>
 			Reviews :
 		</h1>
@@ -41,6 +41,5 @@
 		
 		
 	</div>
-</center>
 </body>
 </html>

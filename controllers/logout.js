@@ -5,6 +5,7 @@ router.get('/', function(req, res){
 
 	//req.session.username = null;
 	res.clearCookie('username');
+	res.clearCookie('userid');
 	res.redirect('/login');
 });
 

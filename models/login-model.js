@@ -11,6 +11,18 @@ module.exports ={
 			}
 		});
 	},
+	getIdType: function(name, callback){
+		var sql = "select uid from khadokusers where Uname=?";
+		db.getResult(sql, [name], function(results){
+			if(results.length > 0){
+				callback(results);
+				// console.log("getIdType id : "+results);
+			}else{
+				console.log('No result Found');
+				callback(null);
+			}
+		});
+	},
 	getByName: function(name, callback){
 		var sql = "select * from KhadokUsers where Uname=?";
 		db.getResult(sql, [name], function(result){

@@ -13,9 +13,17 @@ router.post('/', function(req, res){
 			password: req.body.password
 		};
 
+		userModel.getIdType(req.body.uname, function(results)
+		{
+			res.cookie('userid',[results[0].uid]);
+			console.log("USER ID >> "+[results[0].uid]);
+		});
+				
 		userModel.validate(user, function(status){
 			if(status){
+				
 				res.cookie('username', req.body.uname);
+				
 				if(req.body.uname == "admin")
 				{
 					res.redirect('/home');
