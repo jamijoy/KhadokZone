@@ -1,6 +1,6 @@
 var express 	= require('express');
 var router 		= express.Router();
-// var userModel   = require.main.require('./models/user-model');
+var userModel   = require.main.require('./models/login-model');
 // const check     = require('express-validator');
 // const validationResult = require('express-validator');
 
@@ -35,15 +35,16 @@ router.post('/', function(req, res){
 	
 	var user = {
 		name: req.body.name,
-		mail: req.body.mail,
+		pass: req.body.pass,
+		type: req.body.type
 	};
 
 	userModel.insert(user, function(status){
 		if(status){
 			res.redirect('/login');
-			res.send('Registered');
+			console.log('Registered');
 		}else{
-			res.send("Couldn't Register");
+			console.log("Couldn't Register");
 			res.redirect('/register');
 		}
 	});

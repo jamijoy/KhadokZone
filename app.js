@@ -10,7 +10,7 @@ var logout 			= require('./controllers/logout');
 var home 			= require('./controllers/home');
 var land 			= require('./controllers/land');
 var register		= require('./controllers/register');
-// var empHome		= require('./controllers/employee/home');
+var empHome		= require('./controllers/member/home');
 
 var app = express();
 
@@ -29,10 +29,10 @@ app.use(express.json());
 
 app.use('/login', login);
 app.use('/logout', logout);
-// app.use('/register', register);
+app.use('/register', register);
 app.use('/home', home);
 app.use('/', land);
-// app.use('/employee/home', empHome);
+app.use('/member/home', empHome);
 
 
 //routes

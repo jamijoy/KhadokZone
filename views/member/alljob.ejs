@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registered Job List</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div class="headDiv">
+		<h1 style="margin-left:50px;">
+			<br/>Posted Job List! Current Employee : <%= uname%>
+		</h1>
+		<a href="/logout" style="margin-left:900px;">Logout</a>
+		<a href="/employee/home" style="margin-left:10px;">| Home |</a>
+	</div>
+	<br><br><br><center>
+	<div class="divBorder">
+		<table border="1">
+		<tr>
+			<td>Company Name</td>
+			<td>Title</td>
+			<td>Location</td>
+			<td>Salary</td>
+		</tr>
+		<% for(var i=0; i < joblist.length; i++){ %>
+		<tr>
+			<td><%= joblist[i].companyName %></td>
+			<td><%= joblist[i].jobTile %></td>
+			<td><%= joblist[i].jobLocation %></td>
+			<td><%= joblist[i].salary %></td>
+			<td>
+				<a href="/home/edit/<%= joblist[i].id %>">EDIT</a> | 
+				<a href="/home/delete/<%= joblist[i].id %>">DELETE</a>  
+			</td>
+		</tr>
+		<% } %>
+		</table>
+	</div>
+	</center>
+</body>
+</html>

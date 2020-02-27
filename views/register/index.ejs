@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration Page</title>
+	<title>Registration Page - KhadokZone</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
 	<div class="headDiv">
 		<h1 style="margin-left:50px;">
 			
-			<br/>Registration Page
+			<br/>Registration Page - khadokZone
 		</h1>
-		<a href="/login" style="margin-left:900px;">Have an account? </a>
-		<a href="#" style="margin-left:10px;">About</a>
+		<a href="/login" style="margin-left:900px;">Have an account Already? </a>
+		<a href="#" style="margin-left:10px;">| &nbsp About</a>
 	</div>
-	<div class="divBorder">
-		<form method="post"> 
-			name: <input type="text" name="name" > <br>
-			Mail: <input type="email" name="mail" ><br><br>
-			<input type="submit" name="regiBtn" value="register now!" >
-		</form>
-	</div>
+	
+	<center>
+		<div class="divBorder">
+			<form method="post"> 
+				Name: <input type="text" name="name" > <br>
+				Password: <input type="password" name="pass" ><br>
+				<label for="type">Choose a Type:</label>
+
+				<select id="type" name="type">
+				  <option value="admin">admin</option>
+				  <option value="member">member</option>
+				</select><br><br>
+				<input type="submit" name="regiBtn" value="register now!" >
+			</form>
+		</div>
+	</center>
 </body>
 </html>

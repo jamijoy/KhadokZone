@@ -1,5 +1,5 @@
 body{
-	background-color: dodgerblue;
+	background-color: rgb(12, 237, 203);
 }
 
 a{
@@ -7,7 +7,7 @@ a{
 }
 .headDiv{
 	height:150px;
-	background-color:rgb(12, 237, 203);
+	background-color:dodgerblue;
 	margin-top:0px;
 }
 

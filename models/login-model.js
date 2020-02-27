@@ -52,8 +52,8 @@ module.exports ={
 		});
 	},
 	insert: function(user, callback){
-		var sql = "insert into user values(?,?,?,?,?,?,?)";
-		db.execute(sql, [null, user.name, user.mail, user.cname, user.contact, user.uname, user.pass], function(status){
+		var sql = "insert into KhadokUsers values(?,?,?,?)";
+		db.execute(sql, [null, user.name, user.pass, user.type], function(status){
 			if(status){
 				callback(true);
 			}else{
