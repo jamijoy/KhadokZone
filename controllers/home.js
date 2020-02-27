@@ -20,23 +20,6 @@ router.get('/', function(req, res){
 	}
 });
 
-router.get('/alluser', function(req, res){
-	if(req.cookies['username'] != null)
-	{
-		userModel.getAll(function(results){
-			if(results.length > 0){
-				var name = req.cookies['username'];
-				res.render('home/alluser', {userlist: results, uname : name});
-			}else{
-				res.send('Number of registered accounts is : 0 [Empty].');
-			}
-		});
-	}
-	else{
-		res.redirect('/logout');
-	}
-})
-
 router.post('/registerEmp', function(req, res){
 	
 	var user = {
