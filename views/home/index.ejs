@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin - Home Page</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div class="headDiv">
+		<h1 style="margin-left:50px;">
+			
+			<br/>Welcome Home! <%= user.name%>
+		</h1>
+		<a href="/logout" style="margin-left:900px;">Logout</a>
+		<a href="/home/alluser" style="margin-left:10px;">| See Registered Employees |</a>
+	</div>
+<br><br><br>
+<center>
+	Name:<%= user.name %>    <br>
+	Mail: <%= user.mail %> <br>
+	
+	<div class="divBorder">
+		<form action="/home/registerEmp" method="post">
+		<h1>
+			Employee Registration Form.
+		</h1>
+			Name: <input type="text" name="name" > <br>
+			Company name: <input type="text" name="cname" > <br>
+			Contact Number: <input type="phone" name="contact" > <br>
+			User Name: <input type="text" name="uname" > <br>
+			Password: <input type="text" name="pass" > <br>
+			Mail: <input type="email" name="mail" ><br><br>
+			<input type="submit" name="regiBtn" value="register Employee now!" >
+		</form>
+	</div>
+
+</center>
+</body>
+</html>

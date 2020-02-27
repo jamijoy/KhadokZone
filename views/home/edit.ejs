@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Information Edit page</title>
+</head>
+<body>
+	<div>
+		<h1>Employee Information Edit page</h1> 		
+	</div>
+
+	<a href="/home/alluser"> Back to List</a> |
+	<a href="/logout"> logout</a><br>
+
+	<form method="post">
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="uname" value="<%=user.userName%>"></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" value="<%=user.name%>"></td>
+			</tr>
+			<tr>
+				<td>Company Name</td>
+				<td><input type="text" name="cname" value="<%=user.companyName%>"></td>
+			</tr>
+			<tr>
+				<td>Contact Number</td>
+				<td><input type="text" name="contact" value="<%=user.contact%>"></td>
+			</tr>
+			<tr>
+				<td>Mail</td>
+				<td><input type="text" name="mail" value="<%=user.mail%>"></td>
+			</tr>
+			<tr>
+				<td>Password :</td>
+				<td><input type="password" name="password" value="<%=user.password%>"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="Update Information"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

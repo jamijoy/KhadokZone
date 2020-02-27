@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registered User List</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div class="headDiv">
+		<h1 style="margin-left:50px;">
+			<br/>Users List! Current User : <%= uname%>
+		</h1>
+		<a href="/logout" style="margin-left:900px;">Logout</a>
+		<a href="/home" style="margin-left:10px;">| Home |</a>
+	</div>
+	<br><br><br><center>
+	<div class="divBorder">
+		<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Company Name</td>
+			<td>Contact Number</td>
+			<td>user Name</td>
+			<td>Mail</td>
+			<td>Action</td>
+		</tr>
+		<% for(var i=0; i < userlist.length; i++){ %>
+		<tr>
+			<td><%= userlist[i].id %></td>
+			<td><%= userlist[i].name %></td>
+			<td><%= userlist[i].companyName %></td>
+			<td><%= userlist[i].contact %></td>
+			<td><%= userlist[i].userName %></td>
+			<td><%= userlist[i].mail %></td>
+			<td>
+				<a href="/home/edit/<%= userlist[i].id %>">EDIT</a> | 
+				<a href="/home/delete/<%= userlist[i].id %>">DELETE</a>  
+			</td>
+		</tr>
+		<% } %>
+		</table>
+	</div>
+	</center>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body{
+	background-color: dodgerblue;
+}
+
+a{
+	text-decoration:none;
+}
+.headDiv{
+	height:150px;
+	background-color:rgb(12, 237, 203);
+	margin-top:0px;
+}
+
+.divBorder{
+	width:30%;
+	margin-top:60px;
+	margin-left:20%;
+	background-color:transparent;
+	border-radius:20px;
+	border:2px solid black;
+	padding:20px;
+	text-align:center;
+}

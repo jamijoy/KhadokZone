@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Khadok Zone</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+	</head>
+<body>
+	<div class="headDiv">
+		<h1 style="margin-left:50px;">
+			<br/>KhadokZone
+		</h1>
+		<a href="#" style="margin-left:900px;">About</a>
+		<a href="/login" style="margin-left:10px;">login</a>
+	</div>
+	<br><br><br>
+	<center><h1>
+		Food Items
+	</center></h1>
+	<br><br><center>
+	<div class="divBorder">
+		<table border="1">
+		<tr>
+			<td>Food Name</td>
+			<td>Description</td>
+			<td>Price</td>
+			<td>Type</td>
+			<td>Star</td>
+		</tr>
+		<% for(var i=0; i < foodlist.length; i++){ %>
+		<tr>
+			<td><%= foodlist[i].Fname %></td>
+			<td><%= foodlist[i].Fdes %></td>
+			<td><%= foodlist[i].Fprice %></td>
+			<td><%= foodlist[i].Ftype %></td>
+			<td><%= foodlist[i].Fstar %></td>
+			<td>
+				<a href="#">See Details</a> | 
+				<a href="#">Review</a>
+			</td>
+		</tr>
+		<% } %>
+		</table>
+	</div>
+	</center>
+</body>	
+</html>

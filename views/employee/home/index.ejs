@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee - Home Page</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div class="headDiv">
+		<h1 style="margin-left:50px;">
+			
+			<br/>Welcome Employee! <%= user.name%>
+		</h1>
+		<a href="/logout" style="margin-left:900px;">Logout</a>
+		<a href="/employee/home/alljob" style="margin-left:900px;">! Registered Jobs !</a>
+	</div>
+<br><br><br>
+<center>
+	Name:<%= user.name %>    <br>
+	Mail: <%= user.mail %> <br>
+	
+	<div class="divBorder">
+		<form action="/employee/home/registerJob" method="post">
+		<h1>
+			Job Information Adding Form.
+		</h1>
+			Company name: <input type="text" name="cname" > <br>
+			Job Title: <input type="text" name="title" > <br>
+			Location: <input type="text" name="loc" > <br>
+			salary: <input type="text" name="sal" > <br><br>
+			<input type="submit" name="regiBtn" value="Post new job!" >
+		</form>
+	</div>
+
+</center>
+</body>
+</html>
