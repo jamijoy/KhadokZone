@@ -20,6 +20,7 @@ app.set('view engine', 'ejs');
 
 //middleware
 app.use('/style', express.static('cssFiles'));
+app.use('../../../style', express.static('cssFiles'));
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(exSession({secret: 'my top secret value', saveUninitialized: true, resave: false}));
