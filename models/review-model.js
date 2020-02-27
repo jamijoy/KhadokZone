@@ -51,9 +51,9 @@ module.exports ={
 			}
 		});
 	},
-	insert: function(food, callback){
-		var sql = "insert into khadokfoods values(?,?,?,?,?,?,?)";
-		db.execute(sql, [null, food.rid, food.name, food.des, food.price, food.type, food.star], function(status){
+	insert: function(rev, callback){
+		var sql = "insert into khadokreviews values(?,?,?,?,?)";
+		db.execute(sql, [null, rev.uid, rev.fid, rev.uname, rev.review], function(status){
 			if(status){
 				callback(true);
 			}else{

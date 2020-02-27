@@ -23,5 +23,31 @@ router.get('/Review/:Fid', function(req, res){
 	});
 });
 
+router.post('/Review/:Fid', function(req, res){	
+	console.log(">>> "+req.cookies['userid']);
+	console.log(">>> "+req.params.Fid);
+	console.log(">>> "+req.cookies['username']);
+	console.log(">>> "+req.body.revField);
+	
+	var rev={
+		uid		:	req.cookies['userid'],
+		fid		:	req.params.Fid,
+		uname	:	req.cookies['username'],
+		review	:	req.body.revField,
+	}
+	revModel.insert(rev, function(status){
+		if(status)
+		{
+			console.log('Review Added');
+			res.redirect('/');
+		}
+		else
+		{
+			console.log("Review Couldn't get Updated ");
+			res.redirect('/Review/'+req.params.Fid);
+		}
+	});
+});
+
 module.exports = router;
 
