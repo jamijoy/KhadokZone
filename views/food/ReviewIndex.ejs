@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Review Information</title>
+	<link rel="stylesheet" type="text/css" href="../../style/style.css">
+</head>
+<body>
+	<div class="headDiv">
+		<h1 style="margin-left:50px;">
+			
+			<br/>KhadokZone - Food Review Information ! Food ID : <%= review.Fid%>
+		</h1>
+		<a href="/logout" style="margin-left:900px;">Logout</a>
+		<a href="/home" style="margin-left:10px;">| Home |</a>
+		<a href="/" style="margin-left:10px;">| Back |</a>
+	</div>
+<br><br><br>
+<center>	
+	<div class="divBorder">
+		<h1>
+			Insert Review For This Item
+		</h1>
+				
+	</div>
+	
+	<div class="divBorder">
+		<h1>
+			Food ID:<%= review.Fid %>    <br><br>
+			Restaurant ID:<%= review.Rid %>    <br><br>
+			Food Name:<%= food.Fname %>    <br><br>
+			Description:<%= food.Fdes %>    <br><br>
+			Food Price:<%= food.Fprice %>    <br><br>
+			Food Type:<%= food.Ftype %>    <br><br>
+			Food Star:<%= food.Fstar %>    <br><br>
+		</h1>
+	</div>
+</center>
+</body>
+</html>

@@ -18,6 +18,7 @@
 		Food Items
 	</center></h1><center>
 	<div class="divBorder">
+	<center>
 		<table border="1">
 		<tr>
 			<td>Food Name</td>
@@ -34,12 +35,13 @@
 			<td><%= foodlist[i].Ftype %></td>
 			<td><%= foodlist[i].Fstar %></td>
 			<td>
-				<a href="#">See Details</a> ¬ &nbsp
-				<a href="#">Review</a>
+				<a href="/food/FoodOrganizer/<%= foodlist[i].Fid %>">See Details</a> ¬ &nbsp
+				<a href="/food/FoodOrganizer/Review/<%= foodlist[i].Fid %>">Review</a>
 			</td>
 		</tr>
 		<% } %>
 		</table>
+		</center>
 	</div>
 	</center>
 </body>	

@@ -12,6 +12,7 @@ var land 			= require('./controllers/land');
 var register		= require('./controllers/register');
 var registerRest	= require('./controllers/AddRestaurants');
 var AddFoodItem  	= require('./controllers/AddFoodItem');
+var FoodOrg  	= require('./controllers/food/FoodOrganizer');
 var empHome		= require('./controllers/member/home');
 
 var app = express();
@@ -23,6 +24,7 @@ app.set('view engine', 'ejs');
 //middleware
 app.use('/style', express.static('cssFiles'));
 app.use('../../../style', express.static('cssFiles'));
+app.use('../../style', express.static('cssFiles'));
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(exSession({secret: 'my top secret value', saveUninitialized: true, resave: false}));
@@ -38,6 +40,7 @@ app.use('/', land);
 app.use('/AddRestaurants', registerRest);
 app.use('/AddFoodItem', AddFoodItem);
 app.use('/member/home', empHome);
+app.use('/food/FoodOrganizer', FoodOrg);
 
 
 //routes

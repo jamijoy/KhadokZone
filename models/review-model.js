@@ -11,11 +11,11 @@ module.exports ={
 			}
 		});
 	},
-	getByName: function(name, callback){
-		var sql = "select * from user where userName=?";
-		db.getResult(sql, [name], function(result){
+	getByFoodId: function(id, callback){
+		var sql = "select * from khadokreviews where Fid=?";
+		db.getResult(sql, [id], function(result){
 			if(result.length > 0){
-				callback(result[0]);
+				callback(result);
 			}else{
 				callback(null);
 			}
