@@ -8,16 +8,17 @@
 	<div class="headDiv">
 		<h1 style="margin-left:50px;">
 			
-			<br/>Welcome Home! <%= user.name%>
+			<br/>KhadokZone - Welcome Home! <%= user.Uname%>
 		</h1>
 		<a href="/logout" style="margin-left:900px;">Logout</a>
-		<a href="/home/alluser" style="margin-left:10px;">| See Registered Employees |</a>
+		<a href="/home/alluser" style="margin-left:10px;">| Account Information |</a>
 	</div>
 <br><br><br>
 <center>
-	Name:<%= user.name %>    <br>
-	Mail: <%= user.mail %> <br>
+	Name:<%= user.Uname %>    <br>
+	Type: <%= user.Utype %> <br>
 	
+	<!--
 	<div class="divBorder">
 		<form action="/home/registerEmp" method="post">
 		<h1>
@@ -32,7 +33,8 @@
 			<input type="submit" name="regiBtn" value="register Employee now!" >
 		</form>
 	</div>
-
+	-->
+	
 </center>
 </body>
 </html>

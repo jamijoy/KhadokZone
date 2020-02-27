@@ -22,7 +22,7 @@ router.post('/', function(req, res){
 				}
 				else
 				{
-					res.redirect('/employee/home');
+					res.redirect('/member/home');
 				}
 				
 			}else{

@@ -1,6 +1,6 @@
 var express 	= require('express');
 var router 		= express.Router();
-var userModel   = require.main.require('./models/user-model');
+var userModel   = require.main.require('./models/login-model');
 
 router.get('*', function(req, res, next){
 	if(req.cookies['username'] == null){
